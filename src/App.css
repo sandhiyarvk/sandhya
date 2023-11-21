@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+.name
+{
+  display:flex;
+  justify-content: center;
+}
+.ft
+{
+ 
+  background-color: palegreen;
+}
+.main{
+  
+  padding-right: 0%;
+}
+.bottom{
+ text-align: center;  
+  
+}
+.call
+{
+  text-align: end;
+}
