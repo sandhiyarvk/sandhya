@@ -54,6 +54,13 @@ export default function Appbar() {
           >
             ABOUT
           </CustomLink>
+          &emsp;
+          <CustomLink
+            to="/packages"
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            PACKAGES
+          </CustomLink>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <Menu
               id="menu-appbar"
