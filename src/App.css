@@ -32,29 +32,224 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
-.name
-{
-  display:flex;
+
+.name {
+  display: flex;
   justify-content: center;
 }
-.ft
-{
- 
-  background-color: palegreen;
-}
-.main{
+
+.ft {
+   align-items: start;
+  background-color: DarkTurquoise;
   
+}
+
+.main {
+
   padding-right: 0%;
 }
-.bottom{
- text-align: center;  
+
+.bottom {
+  text-align: center;
+
+}
+
+.call {
+  text-align: end;
+}
+
+.con {
+  display: flex;
+  justify-content: center;
+  height: 350px;
+  right: 10px;
+  left: 10px;
+  padding: 1rem 1rem;
+}
+
+.dis {
+  list-style: none;
+  display: flex
+}
+
+.di {
+  padding-left: 1rem;
+  padding-inline-end: 2rem;
+}
+
+.img {
+  width: 300px;
+  height: 300px;
+}
+
+.login {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #e7bd70, #4e50c8);
   
 }
-.call
-{
-  text-align: end;
+
+form {
+  width: 25rem;
+  height: 28rem;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, .37);
+  border-radius: 30px;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+label{
+  font-size: 20px;
+  color:white;
+  margin-left: 10%;
+  opacity: .8;
+  text-shadow: 2px 2px 4px rgba(0,0,0,.2) ;
+  font-weight: 700;
+}
+input{
+  width:80%;
+  margin:5% auto;
+  margin-bottom:8%;
+  border:none;
+  outline:none;
+  color:white;
+  background: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  opacity: .8;
+  font-size: medium;
+}
+.button{
+    width:50%;
+    margin:3% auto;
+    color:white;
+    font-size:15px;
+    opacity:.7;
+    background:rgba(255, 255, 255, 0.06);
+    padding: 10px 30px;
+    border:none;
+    outline:none;
+    border-radius: 20px;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.2);
+    box-shadow: 3px 3px 5px rgba(31,38,135,.75);
+    
+}
+p{
+  font-size: 17px;
+  text-align: center;
+  color:white;
+  opacity: .7;
+}
+.signup {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #bcc2e0, #b41b8e);
+  
+}
+.form {
+  width: 30rem;
+  height: 45rem;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, .37);
+  border-radius: 30px;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+.label{
+  font-size: 20px;
+  color:white;
+  margin-left: 10%;
+  opacity: .8;
+  text-shadow: 2px 2px 4px rgba(0,0,0,.2) ;
+}
+.inp{
+  width:80%;
+  margin:5% auto;
+  margin-bottom:8%;
+  border:none;
+  outline:none;
+  color:white;
+  background: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  opacity: .8;
+  font-size: medium;
+}
+.but{
+  width:50%;
+  margin:2% auto;
+  font-size:20px;
+  opacity:.7;
+  background:rgba(255, 255, 255, 0.06);
+  padding: 10px 30px;
+  border:none;
+  outline:none;
+  border-radius: 20px;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.2);
+  box-shadow: 3px 3px 5px rgba(31,38,135,.75);
+}
+.userlogin{
+ color: white;
+  letter-spacing: 3;
+  padding-top: 10%;
+
+}
+.Div{
+  display: flex;
+justify-content: space-between;
+padding-right:1%;
+max-width: 345;
+margin-top:5%;
+margin-bottom:5%;
+
+}
+.aText{
+  padding: '20px';
+  text-align: justify;
+  font-family:'geomanist';
+font-size:25px;
+}
+.aPaper{
+  width: 1000px;
+  height: 500px;
+  background-size: 'cover';
+  background-position: 'center'; 
+  color:"black";
+  font-size:'50px';
+  display:'flex';
+  justify-content:'flex-end';
+  align-items:'center';
+}
+.userpage{
+  
+  height: 150vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #2d4bde, #b41b8e);
+}
+.form1{
+  width: 30rem;
+  height: 60rem;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, .37);
+  border-radius: 30px;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
 }

@@ -1,115 +1,81 @@
-import React, { useState } from "react";
-import {
-  TextField,
-  Button,
-  Typography,
-  Paper,
-  Box,
-  Container,
-} from "@mui/material";
-import { Link } from "react-router-dom";
+import React, { useState, useRef } from "react";
+import { Button, Typography } from "@mui/material";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+import { useContext } from "react";
+import { AuthContext } from "./AuthContext";
+
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const userContext = useContext(AuthContext);
+  const navigate = useNavigate();
+  const emailRef = useRef(null);
+  const passwordRef = useRef(null);
+  const [error, setError] = useState("");
 
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-  };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log("Email:", email);
-    console.log("Password:", password);
+    try {
+      const response = await axios.get("http://localhost:4000/users");
+      const users = response.data;
+      const foundUser = users.find(
+        (user) =>
+          user.email === emailRef.current.value &&
+          user.password === passwordRef.current.value
+      );
+      userContext.dispatch({ type: "LOGIN", payload: foundUser });
+      if (foundUser) {
+        navigate("/userpage");
+      } else {
+        setError("Invalid email or password. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error fetching or comparing data:", error);
+      setError("Error while processing. Please try again.");
+    }
   };
 
   return (
-    <Container
-      maxWidth="100%"
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100vh",
-
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-      <Paper
-        style={{
-          textAlign: "center",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          padding: 10,
-          maxWidth: 500,
-          margin: "auto",
-          marginTop: 130,
-          backgroundColor: "#7439db",
-          backgroundImage:
-            'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYiRjZ_iuOepnNoqhFs4gXogvjwrHKTh4kiw&usqp=CAU")',
-        }}
-      >
-        <div style={{ paddding: "5", borderRadius: "10" }}>
-          <center>
-            {" "}
-            <Typography component="h3" variant="h3">
-              USER LOGIN
-            </Typography>
-            <p>Please login to continue</p>
-          </center>
-          <form onSubmit={handleSubmit}>
-            <TextField
-              variant="outlined"
-              margin="normal"
-              fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              type="email"
-              value={email}
-              onChange={handleEmailChange}
-              required
-            />
-            <TextField
-              variant="outlined"
-              margin="normal"
-              fullWidth
-              id="password"
-              label="Password"
-              name="password"
-              type="password"
-              value={password}
-              onChange={handlePasswordChange}
-              required
-            />
-            <br></br>
-            <br></br>
-            <Box display="flex" justifyContent="center" alignItems="center">
-              <Button variant="contained" style={{ backgroundColor: "black" }}>
-                <Link
-                  to="/home"
-                  style={{ textDecoration: "none", color: "white" }}
-                >
-                  LOGIN
-                </Link>
-              </Button>
-            </Box>
-            <br></br>
-            <br></br>
-            <Typography>
-              Don't have an account?&emsp;
-              <Link to="/signup">Register</Link>
-            </Typography>
-          </form>
-        </div>
-      </Paper>
-    </Container>
+    <div className="login">
+      <form onSubmit={handleSubmit}>
+        <center>
+          <Typography variant="h4" className="userlogin">
+            USER LOGIN
+          </Typography>
+        </center>
+        <p>
+          <b>Please login to continue</b>{" "}
+        </p>
+        <label>Email Address</label>
+        <input id="email" name="email" type="email" ref={emailRef} required />
+        <label>Password</label>
+        <input
+          id="password"
+          name="password"
+          typew="password"
+          ref={passwordRef}
+          required
+        />
+        <center>
+          <Button className="button" type="submit" style={{ color: "white" }}>
+            <b>LOGIN</b>
+          </Button>
+        </center>
+        {error && <p style={{ color: "red" }}>{error}</p>}
+        <br></br>
+        <Typography paddingLeft={4}>
+          <b>
+            Don't have an account?&emsp;
+            <Link
+              to="/signup"
+              style={{ textDecoration: "none", color: "black" }}
+            >
+              Register
+            </Link>
+          </b>
+        </Typography>
+      </form>
+    </div>
   );
 };
 

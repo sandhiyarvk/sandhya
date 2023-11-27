@@ -1,76 +1,147 @@
-import { Skeleton} from "@mui/material";
-import React from "react";
+import * as React from "react";
+import { Typography } from "@mui/material";
 
-const Home = () => {
+export default function Home() {
   return (
-    <div
-      style={{
-
-      }}
-    >
-      <center>
-        {" "}
-        <Skeleton
-          variant="rounded"
-          width={210}
-          height={60}
+    <>
+      <div style={{ display: "flex" }}>
+        <img
+          style={{ width: 1500, height: 350, marginTop: 20, marginBottom: 30 }}
+          src="https://th.bing.com/th/id/OIP.7HAYXnYrFGmkGEeibpNRHAHaEK?w=293&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+          alt=""
+        />
+        <h1
           style={{
-            backgroundColor: "black",
-            fontSize: "40px",
-            marginTop: 30,
-            color: "red",
-            fontFamily: "Gabriola",
+            position: "absolute",
+            color: "crimson",
+            marginLeft: "10%",
+            marginTop: "10%",
+            letterSpacing: "3vh",
+            fontSize: 45,
           }}
         >
-          EventsHub
-        </Skeleton>
-      </center>
+          EVENT MANAGEMENT SYSTEM
+        </h1>
+      </div>
 
-      <p style={{ fontFamily: "Cascadia Code", fontSize: "20px" }}>
-        Organizing an event, whether corporate, special, or trade events, is a
-        challenging task. However meticulous and enthusiastic you are, you might
-        be weary of planning and organizing events if it isn’t your usual task.
-        The worst is that you might neglect other essential details of the
-        events that won’t meet quality expectations. That’s where the event
-        planner comes like a superhero! Event planners exist to organize events
-        well ahead of time. From facilities, locations, special guests,
-        equipment, catering, and other big and small details, event planners
-        ensure that all are taken care of. This way, businesses, couples, and
-        celebrants will have time to relax and focus on the most important
-        matters.
-      </p>
-      <center>
+      <Typography
+        variant="h5"
+        style={{
+          marginLeft: "25%",
+          marginRight: "20%",
+          fontSize: 25,
+          fontFamily: "Courier New",
+        }}
+      >
+        Event management is the process of planning and hosting events for
+        social or business purposes. Event management involves applying project
+        management skills to the creation and development of events. Event
+        management also requires working with staff and vendors to ensure the
+        event is executed according to plan. Events can range from small-scale
+        to large-scale and can include festivals, conferences, ceremonies,
+        parties, concerts, or conventions.
+      </Typography>
 
-        <img  alt="Welcome"src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZXZlbnQlMjBwbGFubmluZ3xlbnwwfHwwfHx8MA%3D%3Ds"></img>
-      </center>
-      <p style={{ fontFamily: "Cascadia Code", fontSize: "20px" }}>
-        Today, various event planners provide incredible opportunities for
-        brands and couples to create an ultimate lasting impression on the
-        audience. Fortunately, you can also find them online. If you’re one of
-        them but do not have the ideal website yet, this list is a perfect
-        inspiration set. These event planner websites will inspire you to build
-        your online visibility with sophistication.
-      </p>
-      <center>
-        <img alt="Event" src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGV2ZW50JTIwcGxhbm5pbmd8ZW58MHx8MHx8fDA%3D"></img>
-      </center>
-      <p style={{ fontFamily: "Cascadia Code", fontSize: "20px" }}>
-        While an event planning job is challenging, building your website can be
-        even more challenging. Crafting your website can help you make or break
-        your image as a professional event planner. So, you should research and
-        find tools to help you carry out your plans. Of course, you can find the
-        best websites to guide you in crafting your own.
-      </p>
-      <center>
-        <img alt="Management"src="https://cache.careers360.mobi/media/article_images/2022/7/5/Top-10-Fashion-Shows-in-India.webp" />
-      </center>
-      <p style={{ fontFamily: "Cascadia Code", fontSize: "20px" }}>
-        Building an online presence is not as easy as one may think. That’s why
-        you should ensure all the elements you need: an outstanding layout, good
-        functionality, and a user-friendly design.
-      </p>
-    </div>
+      <div style={{ display: "flex" }}>
+        <img
+          style={{
+            width: 680,
+            height: 350,
+            marginTop: 30,
+            marginBottom: 30,
+            marginLeft: "27%",
+            opacity: 0.8,
+          }}
+          src="https://mmo4you.net/wp-content/uploads/2022/03/mmo4you.net-forex_16.jpg"
+          alt=""
+        />
+        <h1
+          style={{
+            position: "absolute",
+            color: "white",
+            marginLeft: "32%",
+            marginTop: "6%",
+            fontSize: 40,
+          }}
+        >
+          Event Planning Is Our Passion
+        </h1>
+      </div>
+      <Typography
+        variant="h5"
+        style={{
+          marginLeft: "25%",
+          marginRight: "20%",
+          fontSize: 25,
+          fontFamily: "Courier New",
+        }}
+      >
+        Event organizing is a skill that requires perfection, timing, and
+        creativity. The website which we make for events must also reflect
+        these. Since most of the event websites need to handle more traffic, the
+        user interface must be designed thoughtfully. As more and more
+        event-related queries are coming through online, successful event
+        managers are now using websites effectively. These free event website
+        templates will help you create an effective website in no time. By
+        sharing frequently asked queries on the site reduces repetitive tasks.
+      </Typography>
+      <div style={{ display: "flex" }}>
+        <img
+          style={{ width: 1500, height: 350, marginTop: 30, marginBottom: 30 }}
+          src="https://th.bing.com/th?id=OIP.Sd8UakcCqiB_ktwcNmfCvwHaEK&w=333&h=187&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"
+          alt=""
+        />
+        <h1
+          style={{
+            position: "absolute",
+            color: "white",
+            marginLeft: "6%",
+            marginTop: "10%",
+            letterSpacing: "3vh",
+            fontSize: 45,
+          }}
+        >
+          Everything Starts From An Idea!
+        </h1>
+      </div>
+      <Typography
+        variant="h6"
+        style={{ marginLeft: 30, marginRight: 30, fontFamily: "Courier" }}
+      >
+        EventsHub approaches every project with meticulous attention to detail
+        and obsessive precision. Regardless of size and scope, we treat your
+        event like a business with clear strategic goals, defined milestones,
+        and a comprehensive plan to ensure that your event is delivered on time
+        and on budget. At EventsHub, we put your organization first. We learn
+        about your business, we focus on your challenges, and we plan events to
+        support your goals.
+      </Typography>
+      <img
+        style={{ marginLeft: "25%", marginTop: 30, marginBottom: 20 }}
+        src="https://images.squarespace-cdn.com/content/v1/5b2bda42cc8fed2d1f0118d2/1541172884905-HEKQPJY30WNG614Y5Y63/Spark+Website_Experience+Graphic.jpg?format=1500w"
+        alt=""
+      />
+      <hr style={{ marginLeft: "10%", marginRight: "10%" }}></hr>
+      <Typography
+        variant="h6"
+        style={{
+          marginLeft: "20%",
+          marginRight: "20%",
+          fontFamily: "Courier",
+          color: "HotPink",
+          fontWeight: 700,
+          marginTop: "1%",
+          marginBottom: "1%",
+        }}
+      >
+        Working with the team at EventHub has elevated a one-day event into a
+        successful two-day summit. Their expertise shines through when it comes
+        to program development, speaker fulfillment, tradeshow management,
+        sponsorship, marketing, and overall customer service. EventHub’s
+        professionalism and leadership has transformed the planning and
+        execution of our events into a seamless experience.
+      </Typography>
+      <hr></hr>
+    </>
   );
-};
-
-export default Home;
+}
